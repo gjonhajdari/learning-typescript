@@ -1,3 +1,5 @@
-# Learning TypeScript
+<h1>
+<img width="25" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/512px-Typescript_logo_2020.svg.png?20221110153201" /> &nbsp;Learning TypeScript
+</h1>
 
 These files are the results of learning TypeScript from the appendix of the udemy course [React and Typescript: Build a Portfolio Project](https://www.udemy.com/course/react-and-typescript-build-a-portfolio-project/) by Stephen Grider.
