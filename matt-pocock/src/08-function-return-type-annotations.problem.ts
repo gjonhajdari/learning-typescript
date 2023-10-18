@@ -1,24 +1,33 @@
 import { expect, it } from "vitest";
 
-interface User {
+type User = {
   id: number;
   firstName: string;
   lastName: string;
   role: "admin" | "user" | "super-admin";
   posts: Array<Post>;
-}
+};
 
-interface Post {
+type Post = {
   id: number;
   title: string;
-}
+};
 
 /**
  * How do we ensure that makeUser ALWAYS
  * returns a user?
  */
-const makeUser = () => {
-  return {};
+const makeUser = (): User => {
+  return {
+    id: 12345,
+    firstName: "Gjon",
+    lastName: "Hajdari",
+    role: "admin",
+    posts: [
+      { id: 1, title: "POST #1" },
+      { id: 2, title: "POST #2" },
+    ],
+  };
 };
 
 it("Should return a valid user", () => {
