@@ -1,15 +1,15 @@
-interface User {
+type User = {
   id: number;
   firstName: string;
   lastName: string;
   role: "admin" | "user" | "super-admin";
-  posts: Post;
-}
+  posts: Post[];
+};
 
-interface Post {
+type Post = {
   id: number;
   title: string;
-}
+};
 
 export const defaultUser: User = {
   id: 1,
