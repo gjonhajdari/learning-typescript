@@ -1,4 +1,4 @@
-import { fa, faker } from "@faker-js/faker";
+import { faker } from "@faker-js/faker";
 
 export class Company {
   name: string;
@@ -15,5 +15,14 @@ export class Company {
       lat: faker.location.latitude(),
       lng: faker.location.longitude(),
     };
+  }
+
+  markerContent(): string {
+    return `
+			<div>
+				<h1>Company name: ${this.name}</h1>
+				<h3>Catchphrase: ${this.catchPrase}</h3>
+			</div>
+		`;
   }
 }
