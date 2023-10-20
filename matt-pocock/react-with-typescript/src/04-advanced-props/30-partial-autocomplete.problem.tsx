@@ -13,7 +13,7 @@ type Size = keyof typeof presetSizes;
  * a Size. But there's an issue (see below).
  */
 
-type LooseSize = Size | string;
+type LooseSize = Size | (string & {});
 
 export const Icon = (props: { size: LooseSize }) => {
   return (
@@ -42,7 +42,7 @@ export const Icon = (props: { size: LooseSize }) => {
   {/* 1. Try to find a way to express the type LooseSize in a way that */}
   {/* gives autocomplete for 'sm' and 'xs' while also letting the user */}
   {/* pass any value. */}
-  <Icon size="sm"></Icon>
+  <Icon size=""></Icon>
   <Icon size="xs"></Icon>
   <Icon size="10px"></Icon>
 </>;
